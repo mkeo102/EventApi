@@ -11,7 +11,7 @@ import java.util.*;
 /**
  * A Class<?> for dispatching events to all methods that are subscribed to it and request that specific event via the {@link EventTarget} annotation
  */
-//@SuppressWarnings("unchecked")
+@SuppressWarnings({"unchecked", "unused"})
 public class EventDispatcher {
 
     static Logger LOGGER = Logger.getLogger(EventDispatcher.class, false);
@@ -46,14 +46,11 @@ public class EventDispatcher {
             // Static methods
             if(Modifier.isStatic(mn.getModifiers())){
 
-
-
                 if(infos.containsKey(convertMethod(clazz,mn))){
                     LOGGER.warning("Method: {}{} in class: {} is already registered to event : {}",  mn.getName(), getMethodDescriptor(mn), clazz.getName(),e);
                     return;
                 } else {
                     info = new MethodInfo(mn,clazz);
-                    info.addOwnerObject(object);
                     infos.put(convertMethod(clazz,mn),info);
                     eventMap.get(e).add(info);
                 }

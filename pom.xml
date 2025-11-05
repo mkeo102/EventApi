@@ -6,7 +6,7 @@
 
     <groupId>dev.mkeo102.event</groupId>
     <artifactId>EventApi</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -18,7 +18,7 @@
         <dependency>
             <groupId>dev.mkeo102.logger</groupId>
             <artifactId>Logger</artifactId>
-            <version>1.2</version>
+            <version>1.6</version>
         </dependency>
     </dependencies>
 
